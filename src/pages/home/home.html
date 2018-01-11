@@ -1,0 +1,47 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="darkBluePolygon">
+    <div class="titleDiv">
+      <h1 id="firstTitle">What's good in</h1>
+      <p id="selectedCity" (click)="getSelectPage()">{{selectedCity}}</p>
+      <hr class="selectedCityLine">
+    </div>
+    <img src="assets/imgs/homePageImgs/GGlogo.png" alt="Gåde Gade application's logo" class="homePagelogo">
+    <div class="clearFloat"></div>
+    <p class="signupLine" *ngIf="!logged" >Try it and <strong (click)="getRegistrationPage()">sign up</strong> or <strong (click)="getLoginPage()">log in</strong> for more fun!</p>
+    <p class="signupLine" *ngIf="logged" >Choose a game and have fun!</p>
+  </div>
+  <div class="gameCardContainer" *ngFor="let key of objectKeys" (click)="getGameDetails(selectedCityGames[key].id)">
+    <ion-card>
+      <div class="gameCardImgContainer">
+        <div class="gameCardImgDiv">
+          <img src="{{selectedCityGames[key].background_img_url}}" alt="game background image" class="gameCardImg">
+        </div>
+        <div class="gameCardImgFade"></div>
+        <div class="gameCardDifficulty">{{selectedCityGames[key].difficulty}}</div>
+      </div>
+      <ion-card-content class="gameCardContent">
+        <ion-card-title class="gameCardTitle">
+          {{selectedCityGames[key].title}}
+        </ion-card-title>
+        <p class="gameCardInformation">{{selectedCityGames[key].duration}} min - ({{selectedCityGames[key].start_street}})</p>
+        <p class="gameCardDescription">{{selectedCityGames[key].short_description}}</p>
+        <div class="gameCardRatingField">
+          <div class="gameCardStars">
+            <img [src]="Math.round(selectedCityGames[key].value_of_votes / selectedCityGames[key].number_of_votes) >= 1 ? 'assets/imgs/homePageImgs/star_full.png' : 'assets/imgs/homePageImgs/star_empty.png'" alt="rating star" class="gameCardStarsItem">
+            <img [src]="Math.round(selectedCityGames[key].value_of_votes / selectedCityGames[key].number_of_votes) >= 2 ? 'assets/imgs/homePageImgs/star_full.png' : 'assets/imgs/homePageImgs/star_empty.png'" alt="rating star" class="gameCardStarsItem">
+            <img [src]="Math.round(selectedCityGames[key].value_of_votes / selectedCityGames[key].number_of_votes) >= 3 ? 'assets/imgs/homePageImgs/star_full.png' : 'assets/imgs/homePageImgs/star_empty.png'" alt="rating star" class="gameCardStarsItem">
+            <img [src]="Math.round(selectedCityGames[key].value_of_votes / selectedCityGames[key].number_of_votes) >= 4 ? 'assets/imgs/homePageImgs/star_full.png' : 'assets/imgs/homePageImgs/star_empty.png'" alt="rating star" class="gameCardStarsItem">
+            <img [src]="Math.round(selectedCityGames[key].value_of_votes / selectedCityGames[key].number_of_votes) >= 5 ? 'assets/imgs/homePageImgs/star_full.png' : 'assets/imgs/homePageImgs/star_empty.png'" alt="rating star" class="gameCardStarsItem">
+          </div>
+          <p class="gameCardRatingCount">{{selectedCityGames[key].number_of_votes}} rating</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

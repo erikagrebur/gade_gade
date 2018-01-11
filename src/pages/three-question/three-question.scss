@@ -1,0 +1,97 @@
+page-three-question {
+
+    .scroll-content {
+        padding: 0px !important;
+    }
+
+    .leftSide {
+        margin-left: $horizontalSideSpace;
+    }
+
+    .rightSide {
+        margin-right: $horizontalSideSpace;
+    }
+
+    .questionContainer {
+        background: $blueColor;
+        padding: 6px 0px;
+        width: 100%;
+        height: auto;
+        margin-top: 25px;
+    }
+
+    .questionTitle {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: $orangeColor;
+    }
+
+    .answerContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 0; 
+    }
+
+    .leftArrow {
+        width: 50px;
+        height: 50px;
+        background: $orangeColor;
+        -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+        clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+    }
+
+    .rightArrow {
+        width: 50px;
+        height: 50px;
+        background: $orangeColor;
+        -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    }
+
+    .optionContent {
+        height: 50px;
+        width: 100%;
+        margin: 0 10px;
+        border: 2px solid $fadedGreyColor;
+        box-sizing: border-box;
+        -webkit-clip-path: polygon(10% 0, 90% 0, 100% 30%, 100% 70%, 90% 100%, 10% 100%, 0 66%, 0 33%);
+        clip-path: polygon(10% 0, 90% 0, 100% 30%, 100% 70%, 90% 100%, 10% 100%, 0 66%, 0 33%);
+    }
+
+    .optionStyle {
+        height: 100%;
+        margin: 0;
+        padding: 12px 0 0 0;
+        text-align: center;
+        color: $blueColor;
+    }
+
+    #slide {
+        float: right;
+        color: $orangeColor;
+      }
+
+      .bottomContainer {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        z-index: 2;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+    }
+
+    #questionsContainer{
+        margin-bottom: 150px;
+    }
+
+    .nextArrow {
+        top: 1.5px;
+        position: relative;
+    }
+}

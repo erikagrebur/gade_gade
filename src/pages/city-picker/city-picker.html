@@ -1,0 +1,32 @@
+<!--
+  Generated template for the CityPickerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <div class="darkBluePolygon">
+    <div class="titleDiv">
+      <h1 id="firstTitle">What's good in</h1>
+      <input list="citySelection" class="leftSide citySelection" placeholder="Enter location" (input)="valueChange($event.target.value)">
+      <datalist id="citySelection">
+        <option *ngFor="let key of objectKeys" value="{{cityNames[key]}}">{{cityNames[key]}}</option>
+      </datalist>
+    </div>
+    <img src="assets/imgs/homePageImgs/GGlogo.png" alt="Gåde Gade application's logo" class="homePagelogo">
+    <div class="clearFloat"></div>
+    <p class="moreLine">Or browse popular cities!</p>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 *ngFor="let key of objectKeys">
+        <div class="cityCard" (click)="getCity(cityNames[key])">
+          <div class="cityCrestIconContainer">
+            <img *ngIf="imgSrcUrls" src="{{imgSrcUrls[key]}}" alt="{{imgAltProps[key]}}" class="cityCrestImg">
+          </div>
+          <p class="cityName">{{cityNames[key]}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

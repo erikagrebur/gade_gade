@@ -1,0 +1,156 @@
+page-home { 
+  body {
+    font-family: 'Open Sans', sans-serif;
+  } 
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  ion-app.md [padding] {
+    padding: 0px !important;
+  }
+
+  ion-app.md [padding] .scroll-content {
+    padding: 0px !important;
+  }
+  .darkBluePolygon {
+    height:340px;
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+    background-color: $blueColor;
+  }
+  #firstTitle {
+    padding: 39px 0 0 $horizontalSideSpace;
+    color: $orangeColor;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  #selectedCity {
+    font-size: 30px;
+    color: $orangeColor;
+    font-weight: bold;
+    padding-left: $horizontalSideSpace;
+  }
+
+  .selectedCityLine {
+    width: 200px;
+    background-color: $fadedGreyColor;
+    margin-left: $horizontalSideSpace;
+    margin-top: 3px;
+    height: 1px;
+  }
+
+  .homePagelogo {
+    float: right;
+    width: 110px;
+    margin-top: 39px;
+    margin-right: $horizontalSideSpace;
+  }
+
+  .titleDiv {
+    display: inline-block;
+  }
+
+  .signupLine {
+    color: $orangeColor;
+    font-size: 15px;
+    margin: 48px 0 0 $horizontalSideSpace;
+
+  }
+
+  .gameCardContainer:first-child {
+    margin: 0 $horizontalSideSpace;
+  }
+
+  .gameCardContainer {
+    margin: 20px $horizontalSideSpace;
+    position: relative;
+    top: -129px;
+  }
+
+  .gameCardContainer .card-md, .gameCardContainer .card {
+    margin: 0px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .gameCardImgContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .gameCardImg {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .gameCardImgFade {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px 10px 0 0;
+  }
+
+  .gameCardDifficulty {
+    background-color: #FF603D;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    width: 67px;
+    color: white;
+    padding: 6px 0px 4px 0;
+    border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .gameCardContent {
+    position: relative;
+  }
+
+  .gameCardTitle {
+    font-size: 20px;
+    color: $fontColorOnWhite;
+    margin: 0px;
+    padding: 0px;
+    max-width: 180px;
+  }
+
+  .gameCardInformation {
+    color: $fontGreyColor;
+    font-size: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  .gameCardDescription {
+    color: $fontColorOnWhite;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .gameCardRatingField {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+  }
+
+  .gameCardStarsItem {
+    width: 15px;
+    display: inline-block;
+  }
+
+  .gameCardRatingCount {
+    font-size: 8px;
+    color: $fontGreyColor;
+    float: right;
+    margin: -2px 1px 0 0;
+  }
+}

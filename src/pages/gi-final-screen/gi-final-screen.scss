@@ -1,0 +1,49 @@
+page-gi-final-screen {
+    .finishImg {
+        width: 200px;
+        position: relative;
+        left: 50%;
+        margin: 30px auto 20px -100px;
+    }
+
+    .congrat {
+        font-weight: 900;
+        font-size: 25px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .leftSide {
+        margin-left: $horizontalSideSpace;
+    }
+
+    .rightSide {
+        margin-right: $horizontalSideSpace;
+    }
+
+    .slide {
+        float: right;
+        color: $orangeColor;
+      }
+    
+      .bottomContainer {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        z-index: 2;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+    }
+
+    .information {
+        margin-bottom: 150px;
+    }
+
+    .nextArrow {
+        top: 1.5px;
+        position: relative;
+    }
+}

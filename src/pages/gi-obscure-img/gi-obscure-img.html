@@ -1,0 +1,29 @@
+<!--
+  Generated template for the GiObscureImgPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="dark" hideBackButton="true">
+    <ion-title>{{gameTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <p class="leftSide rightSide information" *ngFor="let key of objectKeys">{{paragraphs[key]}}</p>
+  <div id="gameItemContainer" class="leftSide rightSide">
+    <div class="obscureImgsContainer">
+      <img *ngIf="imgSrcUrls[0]" src="{{imgSrcUrls[0]}}" alt="start image" class="obscureImg startImg" [ngStyle]="{'opacity': startImgStyle}">
+      <img *ngIf="imgSrcUrls[1]" src="{{imgSrcUrls[1]}}" alt="target image" class="obscureImg targetImg" [ngStyle]="{'opacity': targetImgStyle}">
+      <p class="wrongWay" [ngStyle]="{'display': wrongWayPTag}">You're in the wrong direction!</p>
+    </div>
+    <div class="obscureRangeContainer">
+      <ion-range [(ngModel)]="rangeLong" max='50' min='0'></ion-range>
+    </div>
+  </div>
+  <div class="bottomContainer">
+      <p class="slide rightSide" (click)="getNextGameItem()" [ngStyle]="{'color': slideStyle}">Next <ion-icon name="arrow-forward" class="nextArrow"></ion-icon></p>
+  </div>
+</ion-content>

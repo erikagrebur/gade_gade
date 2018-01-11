@@ -1,0 +1,45 @@
+<!--
+  Generated template for the GiStartGamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark" hideBackButton="true">
+    <ion-title>{{selectedGame.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!-- <button (click)="showAlert()">
+    Slide
+  </button> -->
+  <div id="map"></div>
+  <div class="startPointContainer leftSide rightSide">
+      <ion-row class="separateRow">
+        <ion-col col-1 class="firstColumn">
+            <ion-icon name="icon-ownStartingIcon" class="gameDetailsIcon"></ion-icon>
+        </ion-col>
+        <ion-col col-5 class="secondColumn">
+            <p class="gameDetailsInformationTitle">Starting point</p>
+        </ion-col>
+        <ion-col col-6 class="streetDown">
+            <p class="gameDetailsInformationValue">{{selectedGame.start_street}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-end>
+        <ion-col class="cityUp">
+            <p class="gameDetailsInformationValue">{{selectedGame.start_town}}</p>
+        </ion-col>
+      </ion-row>
+      <hr class="separateLine">
+  </div>
+  <p class="information leftSide rightSide" (click)="test()">{{basicInfo[0]?.gps_introduction}}</p>
+  <div class="bottomContainer">
+    <img src="assets/imgs/gameImgs/00_start/noGPS.PNG" alt="no GPS icon" id="noGpsIcon" class="leftSide" [ngStyle]="{'display': noGpsIconStyle}">
+    <p id="slide" (click)="getFirstGameItem()" class="rightSide" [ngStyle]="{'color': sliderStyle}">Next <ion-icon name="arrow-forward" class="nextArrow"></ion-icon></p>
+  </div>
+</ion-content>
